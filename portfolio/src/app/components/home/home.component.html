@@ -1,0 +1,99 @@
+<div class="container center-container">
+  <div class="menu" *ngIf="openmenu" id="menu">
+    <div
+      style="position: fixed; right: 20px; margin-top: 35px"
+      (click)="closeMenu()"
+    >
+      <i class="fa-solid fa-xmark fa-xl"></i>
+    </div>
+    <div style="margin-top: 100px; margin-left: 50px; font-size: 15px;">
+      <div class="menu-items">
+        <strong (click)="scrollToElement('about-me')">ABOUT ME</strong>
+      </div>
+      <div class="menu-items">
+        <strong (click)="scrollToElement('skills')">SKILLS</strong>
+      </div>
+      <div class="menu-items">
+        <strong (click)="scrollToElement('education')">EDUCATION</strong>
+      </div>
+      <div class="menu-items">
+        <strong (click)="scrollToElement('company')">COMPANY</strong>
+      </div>
+      <div class="menu-items">
+        <strong (click)="scrollToElement('experience')">EXPERIENCE</strong>
+      </div>
+      <div class="menu-items">
+        <strong (click)="scrollToElement('contact')">CONTACT</strong>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="navbar">
+      <strong class="navbar-item" (click)="scrollToElement('about-me')"
+        >ABOUT ME</strong
+      >
+      <strong class="navbar-item" (click)="scrollToElement('skills')"
+        >SKILLS</strong
+      >
+      <strong class="navbar-item" (click)="scrollToElement('education')"
+        >EDUCATION</strong
+      >
+      <strong class="navbar-item" (click)="scrollToElement('company')"
+        >COMPANY</strong
+      >
+      <strong class="navbar-item" (click)="scrollToElement('experience')"
+        >EXPERIENCE</strong
+      >
+      <strong class="navbar-item" (click)="scrollToElement('contact')"
+        >CONTACT</strong
+      >
+      <strong class="navbar-item">|</strong>
+      <i
+        class="fa-solid fa-magnifying-glass fa-sm"
+        style="margin-top: 11px; margin-left: 10px"
+      ></i>
+    </div>
+
+    <div class="menu-icon" (click)="openMenu()">
+      <i class="fa-solid fa-bars fa-lg"></i>
+    </div>
+
+    <div class="info-image">
+      <div class="info">
+        <div>
+          <div class="music">
+            <i [class]="playpause" (click)="playMusic()"></i>
+            <div>
+              <div class="progress-bar">
+                <div
+                  class="progress"
+                  [style.width.%]="(currentTime / duration) * 100"
+                ></div>
+              </div>
+              <span class="current-time">{{ currentTime | formatTime }}</span>
+            </div>
+          </div>
+
+          <p class="artistic-text">Nguyen Van Viet Anh</p>
+          <p class="artistic-text-1">I'm a <span id="typed-text"></span></p>
+          <div class="contact">
+            <p>
+              <i class="fa-solid fa-envelope fa-lg"> </i> nvva0907@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone fa-lg"></i> 0914917499</p>
+            <p>
+              <i class="fa-solid fa-location-dot fa-lg"></i> Bac Tu Liem, Ha Noi
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="image"></div>
+    </div>
+  </div>
+</div>
+<audio
+  id="music-player"
+  [src]="musicUrl"
+  (timeupdate)="updateCurrentTime($event)"
+  (loadedmetadata)="updateDuration($event)"
+></audio>

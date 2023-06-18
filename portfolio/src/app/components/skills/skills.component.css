@@ -1,0 +1,32 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 0.5px solid #9d9b9b;
+}
+.title {
+  justify-content: center;
+  text-align: center;
+  order: 1;
+  width: 100%;
+  height: 15vh;
+}
+.skill-container {
+  display: flex;
+  order: 2;
+  height: 85vh;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.skill-item{
+  height: 250px;
+  width: 250px;
+  margin-right: 10px ;
+  margin-left: 10px ;
+}

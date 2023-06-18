@@ -1,0 +1,30 @@
+<div class="container">
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="home">
+    <app-home></app-home>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="about-me">
+    <app-about-me></app-about-me>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="skills">
+    <app-skills></app-skills>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="education">
+    <app-education></app-education>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="company">
+    <app-company></app-company>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="experience">
+    <app-experience></app-experience>
+  </div>
+  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="contact">
+    <app-contact></app-contact>
+  </div>
+  <div >
+    <div id="scroll-to-top" (click)="scrollToElement('home')">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

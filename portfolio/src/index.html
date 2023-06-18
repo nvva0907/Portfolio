@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="mat-typography">
+    <app-root></app-root>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const typedText = document.getElementById("typed-text");
+        const textsToType = [
+          "FullStack Developer",
+          "Web Developer",
+          "Java Developer",
+        ];
+        let index = 0;
+        let count = 0;
+
+        function typeText() {
+          const currentText = textsToType[index];
+          const char = currentText.charAt(count);
+
+          typedText.textContent += char;
+          count++;
+
+          if (count === currentText.length) {
+            setTimeout(eraseText, 600);
+          } else {
+            setTimeout(typeText, 150);
+          }
+        }
+
+        function eraseText() {
+          const currentText = textsToType[index];
+
+          if (count > 0) {
+            const newText = currentText.slice(0, count - 1);
+            typedText.textContent = newText;
+            count--;
+
+            setTimeout(eraseText, 50);
+          } else {
+            index++;
+            if (index === textsToType.length) {
+              index = 0; // Restart from the beginning
+            }
+
+            setTimeout(typeText, 600);
+          }
+        }
+
+        typeText();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  height: 200vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 0.5px solid #a2a0a0;
+}
+.title {
+  justify-content: center;
+  text-align: center;
+  order: 1;
+  width: 100%;
+  margin-top: 40px;
+  height: 20vh;
+}
+.company-container{
+  display: flex;
+  order: 2;
+  height: 180vh;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.company-card{
+  display: flex;
+  height: 400px;
+  margin-bottom: 5px;
+  align-items: center;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+.description{
+  text-align: start;
+  width: 100%;
+  height: 200px;
+}
+.description-text{
+  margin-left: 100px;
+}

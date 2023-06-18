@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  border-bottom: 0.5px solid #9d9b9b;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  flex: 2;
+  height: 600px;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.content {
+  flex: 3;
+  height: 600px;
+  margin-right: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Thay đổi hướng hiển thị thành cột */
+  }
+
+  .center-container {
+    flex-direction: column; /* Thay đổi hướng hiển thị thành cột */
+  }
+
+  .avatar {
+    order: 1;
+    margin-left: 0px;
+    margin-bottom: -80px;
+  }
+
+  .content {
+    order: 2;
+    margin-right: 0px;
+  }
+}

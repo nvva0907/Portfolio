@@ -1,0 +1,206 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-image: url("../../../assets/image/background5.png");
+  background-size: cover;
+  background-position: center;
+
+  border-bottom: 0.5px solid #9d9b9b;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  flex: 4;
+  height: 80vh;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgb(20, 19, 19, 0.5);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: end;
+  margin-right: 150px;
+}
+.navbar-item {
+  margin-left: 20px;
+  font-size: 15px;
+}
+.navbar-item:hover {
+  cursor: pointer;
+  color: #636161;
+}
+
+.music {
+  display: flex;
+}
+.info-image {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+.info {
+  display: flex;
+  flex: 3;
+  margin-left: 50px;
+}
+
+.artistic-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #888989, #040404);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.artistic-text-1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  color: #000000;
+  margin-top: -30px;
+  background: linear-gradient(45deg, #253041, #04070b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.menu-icon{
+  display: none;
+}
+/* TYPING_TEXT */
+#typed-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  color: #020202;
+  background: linear-gradient(45deg, #040404, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: typing-animation 1s steps(20, end) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+@keyframes typing-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.contact {
+  font-size: 17px;
+}
+.music-controls {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 2px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ff6347;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.current-time {
+  font-size: 14px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  /* Các quy tắc CSS khác cho màn hình nhỏ hơn hoặc bằng 768px */
+}
+
+/* Quy tắc dành cho màn hình có chiều rộng nhỏ hơn hoặc bằng 480px */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+  .content {
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 0 rgb(20, 19, 19, 0.5);
+  }
+
+  .menu{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+  }
+
+
+  .menu.open {
+    top: 0; /* Hiển thị menu từ trên xuống */
+  }
+
+
+  .music {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .info {
+    display: flex;
+    flex: 3;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .artistic-text {
+    font-size: 30px;
+  }
+  .artistic-text-1 {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+  .menu-items{
+    margin-bottom: 15px;
+  }
+  .menu-icon{
+    display: flex;
+    align-self: end;
+    margin-right: 15px;
+    margin-top: -30px;
+  }
+  /* TYPING_TEXT */
+  #typed-text {
+    font-size: 20px;
+  }
+  .contact {
+    font-size: 12px;
+  }
+  /* Các quy tắc CSS khác cho màn hình nhỏ hơn hoặc bằng 480px */
+}
