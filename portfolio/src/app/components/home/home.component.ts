@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-home',
@@ -11,6 +11,7 @@ export class HomeComponent implements AfterViewInit {
   duration: number = 0;
   playpause: string = 'fa-solid fa-circle-play fa-xl';
   openmenu: boolean = false;
+  @Input() showProgress: boolean = false;
 
   constructor(private sanitizer: DomSanitizer) {
     const musicPath = '../../../assets/mp3/one_upon_a_time.mp3';

@@ -15,8 +15,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HomeComponent } from './components/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FormatTimePipe } from './format-time.pipe';
 @NgModule({
   declarations: [
@@ -28,16 +26,16 @@ import { FormatTimePipe } from './format-time.pipe';
     ExperienceComponent,
     ContactComponent,
     HomeComponent,
-    FormatTimePipe
+    FormatTimePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

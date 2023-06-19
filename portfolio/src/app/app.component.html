@@ -1,8 +1,8 @@
 <div class="container">
   <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="home">
-    <app-home></app-home>
+    <app-home [showProgress]="showProgres"></app-home>
   </div>
-  <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="about-me">
+  <div [@fadeAnimation]="isScrolling ? 'enter' : 'leave'" id="about-me">
     <app-about-me></app-about-me>
   </div>
   <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="skills">
@@ -20,7 +20,7 @@
   <div [@fadeAnimation]="isScrolling ? 'leave' : 'enter'" id="contact">
     <app-contact></app-contact>
   </div>
-  <div >
+  <div>
     <div id="scroll-to-top" (click)="scrollToElement('home')">
       <i class="fa-solid fa-arrow-up"></i>
     </div>

@@ -34,3 +34,41 @@
   margin-top: 30px;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    height: 170vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 0.5px solid #9d9b9b;
+  }
+  .title {
+    justify-content: center;
+    text-align: center;
+    order: 1;
+    width: 100%;
+    height: 20vh;
+  }
+  .education-container{
+    display: flex;
+    order: 2;
+    height: 130vh;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 0px;
+  }
+  .education-card{
+    height: 350px;
+    width: 350px;
+    margin-right: 0px ;
+    margin-left: 0px ;
+  }
+  .description{
+    margin-top: 0px;
+    text-align: center;
+  }
+}

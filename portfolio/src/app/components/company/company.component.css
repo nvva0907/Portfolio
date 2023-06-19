@@ -1,42 +1,74 @@
 .container {
   background-color: rgb(255, 255, 255);
-  height: 200vh;
+  height: 100vh;
   margin: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 0.5px solid #a2a0a0;
+  border-bottom: 0.5px solid #9d9b9b;
 }
 .title {
   justify-content: center;
   text-align: center;
   order: 1;
   width: 100%;
-  margin-top: 40px;
-  height: 20vh;
+  height: 15vh;
 }
 .company-container{
   display: flex;
   order: 2;
-  height: 180vh;
+  height: 85vh;
   width: 100%;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 80px;
 }
 .company-card{
-  display: flex;
-  height: 400px;
-  margin-bottom: 5px;
-  align-items: center;
-  margin-left: 140px;
-  margin-right: 140px;
+  height: 450px;
+  width: 450px;
+  margin-right: 20px ;
+  margin-left: 20px ;
 }
 .description{
-  text-align: start;
-  width: 100%;
-  height: 200px;
+  margin-top: 30px;
+  text-align: center;
 }
-.description-text{
-  margin-left: 100px;
+@media (max-width: 480px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    height: 170vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 0.5px solid #9d9b9b;
+  }
+  .title {
+    justify-content: center;
+    text-align: center;
+    order: 1;
+    width: 100%;
+    height: 20vh;
+  }
+  .company-container{
+    display: flex;
+    order: 2;
+    height: 130vh;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 0px;
+  }
+  .company-card{
+    height: 350px;
+    width: 350px;
+    margin-right: 0px ;
+    margin-left: 0px ;
+  }
+  .description{
+    margin-top: 0px;
+    text-align: center;
+  }
 }

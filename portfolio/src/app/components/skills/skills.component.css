@@ -22,11 +22,18 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 40px;
 }
-.skill-item{
+.skill-item {
   height: 250px;
   width: 250px;
-  margin-right: 10px ;
-  margin-left: 10px ;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .skill-item {
+    height: 100px;
+    width: 150px;
+  }
 }

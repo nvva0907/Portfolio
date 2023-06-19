@@ -1,4 +1,4 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -20,7 +20,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class AppComponent implements AfterViewInit {
   isScrolling: boolean = false;
-
+  showProgres: boolean = true;
   constructor() {}
 
   ngAfterViewInit(): void {
@@ -29,7 +29,6 @@ export class AppComponent implements AfterViewInit {
 
   scrollToElement(elementId: string) {
     const element = document.querySelector(`#${elementId}`);
-
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -38,9 +37,17 @@ export class AppComponent implements AfterViewInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolling = true;
-    // Gọi hàm để tắt trạng thái scrolling sau một khoảng thời gian nhất định
+
     setTimeout(() => {
       this.isScrolling = false;
     }, 200); // Thay đổi giá trị timeout nếu cần thiết
+  }
+
+  closeProgess() {
+    this.showProgres = false;
+  }
+
+  openProgess() {
+    this.showProgres = true;
   }
 }

@@ -62,8 +62,8 @@
       <div class="info">
         <div>
           <div class="music">
-            <i [class]="playpause" (click)="playMusic()"></i>
-            <div>
+            <i [class]="playpause" (click)="playMusic()" style="margin-top: 3px;"></i>
+            <div *ngIf="showProgress">
               <div class="progress-bar">
                 <div
                   class="progress"
